@@ -71,7 +71,6 @@ describe('ProjectsComponent', () => {
     it("should render table", () => {
       const result = fixture.debugElement.queryAll(By.css(".project-table"));
       const markup = result[0].nativeNode.outerHTML;
-      console.log(markup);
 
       //const tableEl = fixture.debugElement.query(By.css('div'));
       //const bodyRows = tableEl.query(By.css('.ui-table-tbody')).queryAll(By.css('tr'));

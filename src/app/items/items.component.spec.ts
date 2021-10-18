@@ -50,7 +50,7 @@ describe('ItemsComponent', () => {
 
     it("should show project header length", async() => {
       var rowHeaderLength = fixture.debugElement.nativeElement.querySelectorAll("th").length;
-      expect(rowHeaderLength).toBe(4);
+      expect(rowHeaderLength).toBe(5);
     });
 
     it("should have table header Name", () => {
@@ -58,19 +58,24 @@ describe('ItemsComponent', () => {
       expect(headers[0].textContent).toEqual("Name");
     });
 
+    it("should have table header Item Description", () => {
+      var headers = fixture.debugElement.nativeElement.querySelectorAll("th")
+      expect(headers[1].textContent).toEqual("Item Description");
+    });
+
     it("should have table header Item Type", () => {
       var headers = fixture.debugElement.nativeElement.querySelectorAll("th")
-      expect(headers[1].textContent).toEqual("Item Type");
+      expect(headers[2].textContent).toEqual("Item Type");
     });
 
     it("should have table header Cost", () => {
       var headers = fixture.debugElement.nativeElement.querySelectorAll("th")
-      expect(headers[2].textContent).toEqual("Cost ($)");
+      expect(headers[3].textContent).toEqual("Cost ($)");
     });
 
     it("should have table header Remove", () => {
       var headers = fixture.debugElement.nativeElement.querySelectorAll("th")
-      expect(headers[3].textContent).toEqual("Remove");
+      expect(headers[4].textContent).toEqual("Remove");
     });
 
     it("should render table", () => {
