@@ -1,0 +1,52 @@
+{
+    "items": [
+        {
+            "item_id": "1",
+            "item_name": "Mobile - Samsung",
+            "item_description": "4 GB RAM, Smart",
+            "item_type": "Hardware",
+            "cost": "345",
+            "added_date": "2-October-2019"
+        },
+        {
+            "item_id": "2",
+            "item_name": "Laptop - Dell",
+            "item_description": "i5 Processor, 8 GB RAM, 256 GB HDD",
+            "item_type": "Hardware",
+            "cost": "456",
+            "added_date": "1-October-2019"
+        },
+        {
+            "item_id": "3",
+            "item_name": "Laptop RAM Upgrade",
+            "item_description": "4 GB RAM",
+            "item_type": "Hardware",
+            "cost": "123",
+            "added_date": "1-October-2019"
+        },
+        {
+            "item_id": "4",
+            "item_name": "Laptop - Dell",
+            "item_description": "i7 Processor, 16 GB RAM, 256 GB HDD",
+            "item_type": "Hardware",
+            "cost": "453",
+            "added_date": "2-October-2018"
+        },
+        {
+            "item_id": "5",
+            "item_name": "Amazon Web Services",
+            "item_description": "Cloud based server",
+            "item_type": "Software",
+            "cost": "123",
+            "added_date": "1-June-2018"
+        },
+        {
+            "item_id": "6",
+            "item_name": "MS Office",
+            "item_description": "MS Office 10, Licenses Version",
+            "item_type": "Software",
+            "cost": "50",
+            "added_date": "15-June-2018"
+        }
+    ]
+}

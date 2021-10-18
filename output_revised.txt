@@ -1,0 +1,3 @@
+projectscomponentBusinessShouldSubmitForm=true
+itemscomponentBusinessShouldSubmitForm=true
+allocationcomponentBusinessShouldSubmitForm=true

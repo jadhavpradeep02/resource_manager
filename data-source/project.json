@@ -1,0 +1,52 @@
+{
+    "projects": [
+        {
+            "project_id": "1",
+            "project_name": "Data Directory",
+            "project_description": "LI Data",
+            "project_start_date": "2-October-2019"
+        },
+        {
+            "project_id": "2",
+            "project_name": "EComm",
+            "project_description": "Ecommerce project used for buy any products related to cosmetic, apparels and household things",
+            "project_start_date": "1-July-2018"
+        },
+        {
+            "project_id": "3",
+            "project_name": "Spectrum",
+            "project_description": "Spectrum - Helps to hire and manage employees",
+            "project_start_date": "5-September-1017"
+        },
+        {
+            "project_id": "4",
+            "project_name": "Tech Support",
+            "project_description": "Technical support to US based Organization which helps them to manage business",
+            "project_start_date": "1-January-2018"
+        },
+        {
+            "project_id": "5",
+            "project_name": "Shipping",
+            "project_description": "Shipping bases business project",
+            "project_start_date": "14-October-2019"
+        },
+        {
+            "project_id": "6",
+            "project_name": "Product Management",
+            "project_description": "Product management",
+            "project_start_date": "24-April-2018"
+        },
+        {
+            "project_id": "7",
+            "project_name": "Postal and Tracking",
+            "project_description": "Postal and Tracking",
+            "project_start_date": "22-June-2017"
+        },
+        {
+            "project_id": "8",
+            "project_name": "S&D Group",
+            "project_description": "S&D Group",
+            "project_start_date": "12-May-2019"
+        }
+    ]
+}

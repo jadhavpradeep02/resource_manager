@@ -1,0 +1,27 @@
+<div>
+    <div class="btn-tray">   
+        <button id="new_project" (click)="openProject()">New Project</button>
+        <button id="export" (click)="export()">Export</button>
+    </div>
+
+    <div class="header">
+        <h1>{{title}}</h1>
+    </div>
+
+    <div class="project-table">
+        <table class="table">
+            <thead>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Remove</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of projectsData">
+                    <td>{{row['project_name']}}</td>
+                    <td>{{row['project_description']}}</td>
+                    <td><button (click)="deleterow()">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

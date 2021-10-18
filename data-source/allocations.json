@@ -1,0 +1,64 @@
+{
+    "allocations": [
+        {
+            "allocation_id": "1",
+            "alloacated_to": "Ashok Kumar",
+            "item": "Mobile - Samsung",
+            "item_description": "4 GB RAM, Smart",
+            "project": "EComm",
+            "allocation_date": "3-October-2019",
+            "po_no": "8927299",
+            "po_amount": "345",
+            "start_date": "3-October-2019",
+            "end_date": "3-October-2021"
+        },
+        {
+            "allocation_id": "2",
+            "alloacated_to": "Anil Kapoor",
+            "item": "Laptop - Dell",
+            "item_description": "i7 Processor, 16 GB RAM, 512 GB HDD",
+            "project": "Spectrum",
+            "allocation_date": "9-January-2019",
+            "po_no": "4567891",
+            "po_amount": "479",
+            "start_date": "9-January-2019",
+            "end_date": "9-January-2022"
+        },
+        {
+            "allocation_id": "3",
+            "alloacated_to": "Mohan Singh",
+            "item": "Laptop - Dell",
+            "item_description": "i5 Processor, 8 GB RAM, 256 GB HDD",
+            "project": "EComm",
+            "allocation_date": "10-February-2019",
+            "po_no": "1234567",
+            "po_amount": "456",
+            "start_date": "10-February-2019",
+            "end_date": "10-February-2022"
+        },
+        {
+            "allocation_id": "4",
+            "alloacated_to": "Abhay Kumar",
+            "item": "Laptop - Dell",
+            "item_description": "i7 Processor, 16 GB RAM, 256 GB HDD",
+            "project": "Tech Support",
+            "allocation_date": "15-March-2020",
+            "po_no": "2345671",
+            "po_amount": "453",
+            "start_date": "15-March-2020",
+            "end_date": "15-March-2023"
+        },
+        {
+            "allocation_id": "5",
+            "alloacated_to": "Hemal Das",
+            "item": "Laptop RAM Upgrade",
+            "item_description": "16 GB RAM",
+            "project": "S&D Group",
+            "allocation_date": "20-June-2019",
+            "po_no": "2323451",
+            "po_amount": "123",
+            "start_date": "20-July-2019",
+            "end_date": "20-June-2022"
+        }
+    ]
+}

@@ -1,0 +1,76 @@
+{
+    "employees": [
+        {
+            "employee_id": "1",
+            "employee_name": "Ashok Kumar",
+            "employee_email": "ashok.kumar@gmail.com",
+            "employee_mobile": "9867153742",
+            "employee_project": "EComm",
+            "employee_birth_date": "11-July-1988",
+            "employee_added_date": "2-October-2019"
+        },
+        {
+            "employee_id": "2",
+            "employee_name": "Anil Kapoor",
+            "employee_email": "anil.kapoor@gmail.com",
+            "employee_mobile": "9773276789",
+            "employee_project": "Spectrum",
+            "employee_birth_date": "10-October-1987",
+            "employee_added_date": "20-May-2019"
+        },
+        {
+            "employee_id": "3",
+            "employee_name": "Mohan Singh",
+            "employee_email": "mohan.singh@gmail.com",
+            "employee_mobile": "9776542345",
+            "employee_project": "EComm",
+            "employee_birth_date": "5-April-1992",
+            "employee_added_date": "23-June-2019"
+        },
+        {
+            "employee_id": "4",
+            "employee_name": "Abhay Kumar",
+            "employee_email": "abhay.kumar@gmail.com",
+            "employee_mobile": "9224448989",
+            "employee_project": "Tech Support",
+            "employee_birth_date": "14-January-1991",
+            "employee_added_date": "23-July-2019"
+        },
+        {
+            "employee_id": "5",
+            "employee_name": "Hemal Das",
+            "employee_email": "hemal.das@gmail.com",
+            "employee_mobile": "9337767827",
+            "employee_project": "S&D Group",
+            "employee_birth_date": "23-July-1989",
+            "employee_added_date": "13-August-2020"
+        },
+        {
+            "employee_id": "6",
+            "employee_name": "Kunal Kumar",
+            "employee_email": "kunal.kumar@gmail.com",
+            "employee_mobile": "8108415999",
+            "employee_project": "Shipping",
+            "employee_birth_date": "11-August-1990",
+            "employee_added_date": "26-January-2018"
+        },
+        {
+            "employee_id": "7",
+            "employee_name": "Soham Sane",
+            "employee_email": "soham.sane@gmail.com",
+            "employee_mobile": "8978564534",
+            "employee_project": "Product Management",
+            "employee_birth_date": "15-August-1992",
+            "employee_added_date": "20-September-2018"
+        },
+        {
+            "employee_id": "8",
+            "employee_name": "Akhilesh Sinha",
+            "employee_email": "akhilesh.sinha@gmail.com",
+            "employee_mobile": "9809806754",
+            "employee_project": "Postal and Tracking",
+            "employee_birth_date": "23-May-1994",
+            "employee_added_date": "13-March-2018"
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+<div>
+    <div class="btn-tray">   
+        <button id="new_item" (click)="openItem()">New Item</button>
+        <button id="export" (click)="export()">Export</button>
+    </div>
+
+    <div class="header">
+        <h1>{{title}}</h1>
+    </div>
+
+    <div class="item-table">
+        <table class="table">
+            <thead>
+                <th>Name</th>
+                <th>Item Description</th>
+                <th>Item Type</th>
+                <th>Cost ($)</th>
+                <th>Remove</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of itemData">
+                    <td>{{row['item_name']}}</td>
+                    <td>{{row['item_description']}}</td>
+                    <td>{{row['item_type']}}</td>
+                    <td>{{row['cost']}}</td>
+                    <td><button (click)="deleterow()">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

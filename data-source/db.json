@@ -1,0 +1,238 @@
+{
+    "allocations": [
+        {
+            "allocation_id": "1",
+            "alloacated_to": "Ashok Kumar",
+            "item": "Mobile - Samsung",
+            "item_description": "4 GB RAM, Smart",
+            "project": "EComm",
+            "allocation_date": "3-October-2019",
+            "po_no": "8927299",
+            "po_amount": "345",
+            "start_date": "3-October-2019",
+            "end_date": "3-October-2021"
+        },
+        {
+            "allocation_id": "2",
+            "alloacated_to": "Anil Kapoor",
+            "item": "Laptop - Dell",
+            "item_description": "i7 Processor, 16 GB RAM, 512 GB HDD",
+            "project": "Spectrum",
+            "allocation_date": "9-January-2019",
+            "po_no": "4567891",
+            "po_amount": "479",
+            "start_date": "9-January-2019",
+            "end_date": "9-January-2022"
+        },
+        {
+            "allocation_id": "3",
+            "alloacated_to": "Mohan Singh",
+            "item": "Laptop - Dell",
+            "item_description": "i5 Processor, 8 GB RAM, 256 GB HDD",
+            "project": "EComm",
+            "allocation_date": "10-February-2019",
+            "po_no": "1234567",
+            "po_amount": "456",
+            "start_date": "10-February-2019",
+            "end_date": "10-February-2022"
+        },
+        {
+            "allocation_id": "4",
+            "alloacated_to": "Abhay Kumar",
+            "item": "Laptop - Dell",
+            "item_description": "i7 Processor, 16 GB RAM, 256 GB HDD",
+            "project": "Tech Support",
+            "allocation_date": "15-March-2020",
+            "po_no": "2345671",
+            "po_amount": "453",
+            "start_date": "15-March-2020",
+            "end_date": "15-March-2023"
+        },
+        {
+            "allocation_id": "5",
+            "alloacated_to": "Hemal Das",
+            "item": "Laptop RAM Upgrade",
+            "item_description": "16 GB RAM",
+            "project": "S&D Group",
+            "allocation_date": "20-June-2019",
+            "po_no": "2323451",
+            "po_amount": "123",
+            "start_date": "20-July-2019",
+            "end_date": "20-June-2022"
+        }
+    ],
+    "employees": [
+        {
+            "employee_id": "1",
+            "employee_name": "Ashok Kumar",
+            "employee_email": "ashok.kumar@gmail.com",
+            "employee_mobile": "9867153742",
+            "employee_project": "EComm",
+            "employee_birth_date": "11-July-1988",
+            "employee_added_date": "2-October-2019"
+        },
+        {
+            "employee_id": "2",
+            "employee_name": "Anil Kapoor",
+            "employee_email": "anil.kapoor@gmail.com",
+            "employee_mobile": "9773276789",
+            "employee_project": "Spectrum",
+            "employee_birth_date": "10-October-1987",
+            "employee_added_date": "20-May-2019"
+        },
+        {
+            "employee_id": "3",
+            "employee_name": "Mohan Singh",
+            "employee_email": "mohan.singh@gmail.com",
+            "employee_mobile": "9776542345",
+            "employee_project": "EComm",
+            "employee_birth_date": "5-April-1992",
+            "employee_added_date": "23-June-2019"
+        },
+        {
+            "employee_id": "4",
+            "employee_name": "Abhay Kumar",
+            "employee_email": "abhay.kumar@gmail.com",
+            "employee_mobile": "9224448989",
+            "employee_project": "Tech Support",
+            "employee_birth_date": "14-January-1991",
+            "employee_added_date": "23-July-2019"
+        },
+        {
+            "employee_id": "5",
+            "employee_name": "Hemal Das",
+            "employee_email": "hemal.das@gmail.com",
+            "employee_mobile": "9337767827",
+            "employee_project": "S&D Group",
+            "employee_birth_date": "23-July-1989",
+            "employee_added_date": "13-August-2020"
+        },
+        {
+            "employee_id": "6",
+            "employee_name": "Kunal Kumar",
+            "employee_email": "kunal.kumar@gmail.com",
+            "employee_mobile": "8108415999",
+            "employee_project": "Shipping",
+            "employee_birth_date": "11-August-1990",
+            "employee_added_date": "26-January-2018"
+        },
+        {
+            "employee_id": "7",
+            "employee_name": "Soham Sane",
+            "employee_email": "soham.sane@gmail.com",
+            "employee_mobile": "8978564534",
+            "employee_project": "Product Management",
+            "employee_birth_date": "15-August-1992",
+            "employee_added_date": "20-September-2018"
+        },
+        {
+            "employee_id": "8",
+            "employee_name": "Akhilesh Sinha",
+            "employee_email": "akhilesh.sinha@gmail.com",
+            "employee_mobile": "9809806754",
+            "employee_project": "Postal and Tracking",
+            "employee_birth_date": "23-May-1994",
+            "employee_added_date": "13-March-2018"
+        }
+    ],
+    "items": [
+        {
+            "item_id": "1",
+            "item_name": "Mobile - Samsung",
+            "item_description": "4 GB RAM, Smart",
+            "item_type": "Hardware",
+            "cost": "345",
+            "added_date": "2-October-2019"
+        },
+        {
+            "item_id": "2",
+            "item_name": "Laptop - Dell",
+            "item_description": "i5 Processor, 8 GB RAM, 256 GB HDD",
+            "item_type": "Hardware",
+            "cost": "456",
+            "added_date": "1-October-2019"
+        },
+        {
+            "item_id": "3",
+            "item_name": "Laptop RAM Upgrade",
+            "item_description": "4 GB RAM",
+            "item_type": "Hardware",
+            "cost": "123",
+            "added_date": "1-October-2019"
+        },
+        {
+            "item_id": "4",
+            "item_name": "Laptop - Dell",
+            "item_description": "i7 Processor, 16 GB RAM, 256 GB HDD",
+            "item_type": "Hardware",
+            "cost": "453",
+            "added_date": "2-October-2018"
+        },
+        {
+            "item_id": "5",
+            "item_name": "Amazon Web Services",
+            "item_description": "Cloud based server",
+            "item_type": "Software",
+            "cost": "123",
+            "added_date": "1-June-2018"
+        },
+        {
+            "item_id": "6",
+            "item_name": "MS Office",
+            "item_description": "MS Office 10, Licenses Version",
+            "item_type": "Software",
+            "cost": "50",
+            "added_date": "15-June-2018"
+        }
+    ],
+    "projects": [
+        {
+            "project_id": "1",
+            "project_name": "Data Directory",
+            "project_description": "LI Data",
+            "project_start_date": "2-October-2019"
+        },
+        {
+            "project_id": "2",
+            "project_name": "EComm",
+            "project_description": "Ecommerce project used for buy any products related to cosmetic, apparels and household things",
+            "project_start_date": "1-July-2018"
+        },
+        {
+            "project_id": "3",
+            "project_name": "Spectrum",
+            "project_description": "Spectrum - Helps to hire and manage employees",
+            "project_start_date": "5-September-1017"
+        },
+        {
+            "project_id": "4",
+            "project_name": "Tech Support",
+            "project_description": "Technical support to US based Organization which helps them to manage business",
+            "project_start_date": "1-January-2018"
+        },
+        {
+            "project_id": "5",
+            "project_name": "Shipping",
+            "project_description": "Shipping bases business project",
+            "project_start_date": "14-October-2019"
+        },
+        {
+            "project_id": "6",
+            "project_name": "Product Management",
+            "project_description": "Product management",
+            "project_start_date": "24-April-2018"
+        },
+        {
+            "project_id": "7",
+            "project_name": "Postal and Tracking",
+            "project_description": "Postal and Tracking",
+            "project_start_date": "22-June-2017"
+        },
+        {
+            "project_id": "8",
+            "project_name": "S&D Group",
+            "project_description": "S&D Group",
+            "project_start_date": "12-May-2019"
+        }
+    ]
+}
