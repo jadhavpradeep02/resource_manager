@@ -111,15 +111,15 @@ describe('AllocationComponent', () => {
 
     it('item_name field validity', () => {
       let errors = {};
-      let alloacated_to = component.allocationForm.controls['alloacated_to'];
-      expect(alloacated_to.valid).toBeFalsy();
+      let allocated_to = component.allocationForm.controls['allocated_to'];
+      expect(allocated_to.valid).toBeFalsy();
 
-      // errors = alloacated_to.errors || {};
+      // errors = allocated_to.errors || {};
       // expect(errors["required"]).toBeTruthy();
 
-      // Set alloacated_to to something correct
-      alloacated_to.setValue("");
-      errors = alloacated_to.errors || {};
+      // Set allocated_to to something correct
+      allocated_to.setValue("");
+      errors = allocated_to.errors || {};
       expect(errors["required"]).toBeTruthy();
     });
 
@@ -239,7 +239,7 @@ describe('AllocationComponent', () => {
   describe('business', () => {
     it("should submit form", () => {
       expect(component.allocationForm.valid).toBeFalsy();
-      component.allocationForm.controls["alloacated_to"].setValue("Ashok Kumar");
+      component.allocationForm.controls["allocated_to"].setValue("Ashok Kumar");
       component.allocationForm.controls["item"].setValue("Mobile - Samsung");
       component.allocationForm.controls["item_description"].setValue("4 GB RAM, Smart");
       component.allocationForm.controls["project"].setValue("EComm");
@@ -261,7 +261,7 @@ describe('AllocationComponent', () => {
       component.onSubmit();
 
       // Now we can check to make sure the emitted value is correct
-      expect(allocation.alloacated_to).toEqual(allocation.alloacated_to);
+      expect(allocation.allocated_to).toEqual(allocation.allocated_to);
       expect(allocation.item).toEqual(allocation.item);
       expect(allocation.item_description).toEqual(allocation.item_description);
       expect(allocation.project).toEqual(allocation.project);

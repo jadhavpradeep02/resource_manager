@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ItemsService } from '../services/items.service';
 
 export class Items {
@@ -24,7 +25,7 @@ export class ItemsComponent implements OnInit {
   public obj: any = {};
   title = "Manage Item";
 
-  constructor(private itemsService: ItemsService, private fb: FormBuilder) { }
+  constructor(private itemsService: ItemsService, private fb: FormBuilder, private modalService: NgbModal) { }
 
   ngOnInit(): void {
     this.itemsService.getItemsData().subscribe(data => {
@@ -60,12 +61,29 @@ export class ItemsComponent implements OnInit {
     }
   }
 
-  openItem() {
+  openItem(content) {
+    this.modalService.open(content, { size: 'lg' });
   }
 
   export(){
   }
 
-  deleterow(){
+  deleterow(id) {
+    this.itemData = this.itemData.filter(item => item.item_id != id);
+  }
+
+  addItem(){
+    console.log("addItem")
+    if (this.itemsForm.valid) {
+      let item = {
+        "item_id": parseInt(this.itemData[this.itemData.length - 1].item_id) + 1,
+        "item_name" : this.itemsForm.value.item_name,
+        "item_type" : this.itemsForm.value.item_type,
+        "item_description" : this.itemsForm.value.item_description,
+        "cost" : this.itemsForm.value.item_cost
+      }
+      this.itemData = [...this.itemData, item];
+      console.log(this.itemData);
+    }
   }
 }

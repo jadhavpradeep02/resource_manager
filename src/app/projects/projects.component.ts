@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ProjectsService } from '../services/projects.service';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 
 export class Project {
@@ -24,7 +25,7 @@ export class ProjectsComponent implements OnInit {
   public obj: any = {};
   title = "Manage Project";
 
-  constructor(private projectService: ProjectsService, private fb: FormBuilder) { }
+  constructor(private projectService: ProjectsService, private fb: FormBuilder, private modalService: NgbModal) { }
 
   ngOnInit(): void {
     this.projectService.getProjectData().subscribe(data => {
@@ -41,7 +42,6 @@ export class ProjectsComponent implements OnInit {
 
   onSubmit() {
     this.obj = { ...this.projectForm.value, ...this.obj };
-    this.projectForm.value;
     console.log(
       "LOG: LoginComponent -> onSubmit -> this.projectForm.value",
       this.projectForm.value
@@ -58,12 +58,28 @@ export class ProjectsComponent implements OnInit {
     }
   }
 
-  openProject() {
+  openProject(content) {
+    this.modalService.open(content, { size: 'lg' });
   }
 
   export() {
   }
 
-  deleterow() {
+  deleterow(id) {
+    this.projectsData = this.projectsData.filter(project => project.project_id != id);
+  }
+
+  addProduct(){
+    console.log("addProduct")
+    if (this.projectForm.valid) {
+      let project = {
+        "project_id": parseInt(this.projectsData[this.projectsData.length - 1].project_id) + 1,
+        "project_name": this.projectForm.value.project_name,
+        "project_description": this.projectForm.value.project_description,
+        "project_start_date": this.projectForm.value.project_start_date
+      }
+      this.projectsData = [...this.projectsData, project];
+      console.log(this.projectsData);
+    }
   }
 }

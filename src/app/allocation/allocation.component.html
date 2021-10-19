@@ -1,6 +1,6 @@
 <div>
     <div class="btn-tray">   
-        <button id="new_allocation" (click)="openAllocation()">New Allocation</button>
+        <button id="new_allocation" (click)="openAllocation(contentAllocation)">New Allocation</button>
         <button id="export" (click)="export()">Export</button>
     </div>
 
@@ -23,7 +23,7 @@
             <tbody>
                 <tr *ngFor="let row of allocationData">
                     <td>{{row['allocation_id']}}</td>
-                    <td>{{row['alloacated_to']}}</td>
+                    <td>{{row['allocated_to']}}</td>
                     <td>{{row['item']}}</td>
                     <td>{{row['project']}}</td>
                     <td>{{row['allocation_date']}}</td>
@@ -35,3 +35,38 @@
         </table>
     </div>
 </div>
+
+<ng-template #contentAllocation let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Add Allocation</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <div [formGroup]="allocationForm">
+            <label for="allocated_to">Allocated To: </label>
+            <input id="allocated_to" type="text" formControlName="allocated_to"><br><br>
+            <label for="item">Item: </label>
+            <input id="item" type="text" formControlName="item"><br><br>
+            <label for="item_description">Description: </label>
+            <input id="item_description" type="text" formControlName="item_description"><br><br>
+            <label for="project">Project: </label>
+            <input id="project" type="text" formControlName="project"><br><br>
+            <label for="allocation_date">Allocation Date: </label>
+            <input id="allocation_date" type="text" formControlName="allocation_date"><br><br>
+            <label for="po_no">PO Number: </label>
+            <input id="po_no" type="text" formControlName="po_no"><br><br>
+            <label for="po_amount">PO Amount: </label>
+            <input id="po_amount" type="text" formControlName="po_amount"><br><br>
+            <label for="start_date">Starte Date: </label>
+            <input id="start_date" type="text" formControlName="start_date"><br><br>
+            <label for="end_date">End Date: </label>
+            <input id="end_date" type="text" formControlName="end_date"><br><br>
+          </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+      <button type="button" class="btn btn-light" (click)="addAllocation(); modal.close('Close click');">Add</button>
+    </div>
+</ng-template>

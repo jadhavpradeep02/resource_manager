@@ -2,7 +2,7 @@
     "allocations": [
         {
             "allocation_id": "1",
-            "alloacated_to": "Ashok Kumar",
+            "allocated_to": "Ashok Kumar",
             "item": "Mobile - Samsung",
             "item_description": "4 GB RAM, Smart",
             "project": "EComm",
@@ -14,7 +14,7 @@
         },
         {
             "allocation_id": "2",
-            "alloacated_to": "Anil Kapoor",
+            "allocated_to": "Anil Kapoor",
             "item": "Laptop - Dell",
             "item_description": "i7 Processor, 16 GB RAM, 512 GB HDD",
             "project": "Spectrum",
@@ -26,7 +26,7 @@
         },
         {
             "allocation_id": "3",
-            "alloacated_to": "Mohan Singh",
+            "allocated_to": "Mohan Singh",
             "item": "Laptop - Dell",
             "item_description": "i5 Processor, 8 GB RAM, 256 GB HDD",
             "project": "EComm",
@@ -38,7 +38,7 @@
         },
         {
             "allocation_id": "4",
-            "alloacated_to": "Abhay Kumar",
+            "allocated_to": "Abhay Kumar",
             "item": "Laptop - Dell",
             "item_description": "i7 Processor, 16 GB RAM, 256 GB HDD",
             "project": "Tech Support",
@@ -50,7 +50,7 @@
         },
         {
             "allocation_id": "5",
-            "alloacated_to": "Hemal Das",
+            "allocated_to": "Hemal Das",
             "item": "Laptop RAM Upgrade",
             "item_description": "16 GB RAM",
             "project": "S&D Group",

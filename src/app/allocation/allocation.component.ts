@@ -1,10 +1,11 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AllocationService } from '../services/allocation.service';
 
 export class Allocation {
   constructor(
-    public alloacated_to: string,
+    public allocated_to: string,
     public item: string,
     public item_description: string,
     public project: string,
@@ -28,7 +29,7 @@ export class AllocationComponent implements OnInit {
   public obj: any = {};
   title: string = "All Allocations";
 
-  constructor(private allocationService: AllocationService, private fb: FormBuilder) { }
+  constructor(private allocationService: AllocationService, private fb: FormBuilder, private modalService: NgbModal) { }
 
   ngOnInit(): void {
     this.allocationService.getAllocationData().subscribe(data => {
@@ -37,7 +38,7 @@ export class AllocationComponent implements OnInit {
     });
 
     this.allocationForm = this.fb.group({
-      alloacated_to: ["", [Validators.required]],
+      allocated_to: ["", [Validators.required]],
       item: ["", [Validators.required]],
       item_description: ["", [Validators.required]],
       project: ["", [Validators.required]],
@@ -60,7 +61,7 @@ export class AllocationComponent implements OnInit {
     if (this.allocationForm.valid) {
       this.allocationsdata.emit(
         new Allocation(
-          this.allocationForm.value.alloacated_to,
+          this.allocationForm.value.allocated_to,
           this.allocationForm.value.item,
           this.allocationForm.value.item_description,
           this.allocationForm.value.project,
@@ -74,7 +75,28 @@ export class AllocationComponent implements OnInit {
     }
   }
 
-  openAllocation() {
+  openAllocation(content) {
+    this.modalService.open(content, { size: 'lg' });
+  }
+
+  addAllocation(){
+    console.log("addItem")
+    if (this.allocationForm.valid) {
+      let item = {
+        "allocation_id": parseInt(this.allocationData[this.allocationData.length - 1].allocation_id) + 1,
+        "allocated_to": this.allocationForm.value.allocated_to,
+        "item": this.allocationForm.value.item,
+        "item_description": this.allocationForm.value.item_description,
+        "project": this.allocationForm.value.project,
+        "allocation_date": this.allocationForm.value.allocation_date,
+        "po_no": this.allocationForm.value.po_no,
+        "po_amount": this.allocationForm.value.po_amount,
+        "start_date": this.allocationForm.value.start_date,
+        "end_date": this.allocationForm.value.end_date
+      }
+      this.allocationData = [...this.allocationData, item];
+      console.log(this.allocationData);
+    }
   }
 
   export() {
