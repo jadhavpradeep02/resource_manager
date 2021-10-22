@@ -1,0 +1,24 @@
+<div>
+    <h4 class="title">Add Item</h4>
+    <form [formGroup]="itemsForm" (ngSubmit)="addItem()">
+        <div class="form-group">
+            <label for="item_name">Name: </label><br>
+            <input id="item_name" type="text" formControlName="item_name"><br><br>
+        </div>
+        <div class="form-group">
+            <label for="item_type">Type: </label><br>
+            <input id="item_type" type="text" formControlName="item_type"><br><br>
+        </div>
+        <div class="form-group">
+            <label for="item_description">Description: </label><br>
+            <input id="item_description" type="text" formControlName="item_description"><br><br>    
+        </div>
+        <div class="form-group">
+            <label for="item_cost">Cost: </label><br>
+            <input id="item_cost" type="text" formControlName="item_cost"><br><br>
+        </div>
+        
+        <button type="button" class="btn btn-success" (click)="cancel()">Cancel</button>&nbsp;
+        <button type="submit" class="btn btn-success" >Submit</button>
+    </form>
+</div>

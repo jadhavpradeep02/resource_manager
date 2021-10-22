@@ -1,7 +1,7 @@
 <div>
     <div class="btn-tray">   
-        <button id="new_project" (click)="openProject(content)">New Project</button>
-        <button id="export" (click)="export()">Export</button>
+        <button id="new_project" class="btn btn-primary" (click)="openProject()">New Project</button>&nbsp;
+        <button id="export" class="btn btn-primary" (click)="export()">Export</button>
     </div>
 
     <div class="header">
@@ -25,26 +25,3 @@
         </table>
     </div>
 </div>
-
-<ng-template #content let-modal>
-    <div class="modal-header">
-      <h4 class="modal-title">Add Project</h4>
-      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-        <div [formGroup]="projectForm">
-            <label for="project_name">Name: </label>
-            <input id="project_name" type="text" formControlName="project_name"><br><br>
-            <label for="project_description">Description: </label>
-            <input id="project_description" type="text" formControlName="project_description"><br><br>
-            <label for="project_start_date">Start Date: </label>
-            <input id="project_start_date" type="text" formControlName="project_start_date"><br><br>
-          </div>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
-      <button type="button" class="btn btn-light" (click)="addProduct(); modal.close('Close click');">Add</button>
-    </div>
-</ng-template>

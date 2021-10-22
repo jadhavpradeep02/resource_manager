@@ -26,4 +26,8 @@ export class SideBarComponent implements OnInit {
     this.router.navigate(['/projects']);
   }
 
+  showUsers() {
+    this.router.navigate(['/users']);
+  }
+
 }

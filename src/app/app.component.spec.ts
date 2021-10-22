@@ -1,7 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
 import { ItemsComponent } from './items/items.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
@@ -16,7 +15,6 @@ describe('AppComponent', () => {
       ],
       declarations: [
         AppComponent,
-        LoginComponent,
         ItemsComponent,
         ProjectsComponent,
         SideBarComponent,

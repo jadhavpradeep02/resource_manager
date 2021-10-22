@@ -1,0 +1,66 @@
+<div>
+    <div class="btn-tray">   
+        <button id="new_user" class="btn btn-primary" (click)="openUser()">New user</button>&nbsp;
+        <button id="export" class="btn btn-primary" (click)="export()">Export</button>
+    </div>
+
+    <div class="header">
+        <h1>{{title}}</h1>
+    </div>
+
+    <div class="user-table">
+        <table class="table">
+            <thead>
+                <th>Employee ID</th>
+                <th>Employee Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Project</th>
+                <th>Birth Date</th>
+                <th>Assigned Date</th>
+                <th>Remove</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of usersData">
+                    <td>{{row['employee_id']}}</td>
+                    <td>{{row['employee_name']}}</td>
+                    <td>{{row['employee_email']}}</td>
+                    <td>{{row['employee_mobile']}}</td>
+                    <td>{{row['employee_project']}}</td>
+                    <td>{{row['employee_birth_date']}}</td>
+                    <td>{{row['employee_added_date']}}</td>
+                    <td><button (click)="deleterow(row['employee_id'])">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Add Employee</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <div [formGroup]="userForm">
+            <label for="user_name">Name: </label>
+            <input id="user_name" type="text" formControlName="user_name"><br><br>
+            <label for="user_email">Email: </label>
+            <input id="user_email" type="text" formControlName="user_email"><br><br>
+            <label for="employee_mobile">Mobile: </label>
+            <input id="employee_mobile" type="text" formControlName="employee_mobile"><br><br>
+            <label for="employee_project">Project: </label>
+            <input id="employee_project" type="text" formControlName="employee_project"><br><br>
+            <label for="employee_birth_date">Employee Birth Date: </label>
+            <input id="employee_birth_date" type="text" formControlName="employee_birth_date"><br><br>
+            <label for="employee_added_date">Assigned Date: </label>
+            <input id="employee_added_date" type="text" formControlName="employee_added_date"><br><br>
+          </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+      <button type="button" class="btn btn-light" (click)="addUser(); modal.close('Close click');">Add</button>
+    </div>
+</ng-template>

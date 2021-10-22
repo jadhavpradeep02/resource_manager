@@ -1,7 +1,7 @@
 <div>
     <div class="btn-tray">   
-        <button id="new_item" (click)="openItem(contentItem)">New Item</button>
-        <button id="export" (click)="export()">Export</button>
+        <button id="new_item" class="btn btn-primary" (click)="openItem()">New Item</button>&nbsp;
+        <button id="export" class="btn btn-primary" (click)="export()">Export</button>
     </div>
 
     <div class="header">
@@ -29,28 +29,3 @@
         </table>
     </div>
 </div>
-
-<ng-template #contentItem let-modal>
-    <div class="modal-header">
-      <h4 class="modal-title">Add Item</h4>
-      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-        <form [formGroup]="itemsForm">
-            <label for="item_name">Name: </label>
-            <input id="item_name" type="text" formControlName="item_name"><br><br>
-            <label for="item_type">Type: </label>
-            <input id="item_type" type="text" formControlName="item_type"><br><br>
-            <label for="item_description">Description: </label>
-            <input id="item_description" type="text" formControlName="item_description"><br><br>
-            <label for="item_cost">Cost: </label>
-            <input id="item_cost" type="text" formControlName="item_cost"><br><br>
-        </form>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
-      <button type="button" class="btn btn-light" (click)="addItem(); modal.close('Close click');">Add</button>
-    </div>
-</ng-template>

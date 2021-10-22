@@ -1,0 +1,32 @@
+<div>
+    <h4 class="title">Add User</h4>
+    <form [formGroup]="userForm" (ngSubmit)="addUser()">
+        <div class="form-group">
+            <label for="employee_name">Name: </label><br>
+            <input id="employee_name" type="text" formControlName="employee_name"><br><br>
+        </div>
+        <div class="form-group">
+            <label for="employee_email">Email: </label><br>
+            <input id="employee_email" type="text" formControlName="employee_email"><br><br>
+        </div>
+        <div class="form-group">
+            <label for="employee_mobile">Mobile: </label><br>
+            <input id="employee_mobile" type="text" formControlName="employee_mobile"><br><br>    
+        </div>
+        <div class="form-group">
+            <label for="employee_project">Project: </label><br>
+            <input id="employee_project" type="text" formControlName="employee_project"><br><br>
+        </div>
+        <div class="form-group">
+            <label for="employee_birth_date">Birth Date: </label><br>
+            <input id="employee_birth_date" type="text" formControlName="employee_birth_date"><br><br>
+        </div>
+        <div class="form-group">
+            <label for="employee_added_date">Joining Date: </label><br>
+            <input id="employee_added_date" type="text" formControlName="employee_added_date"><br><br>    
+        </div>
+        
+        <button type="button" class="btn btn-success" (click)="cancel()">Cancel</button>&nbsp;
+        <button type="submit" class="btn btn-success" >Submit</button>
+    </form>
+</div>

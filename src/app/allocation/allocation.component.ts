@@ -2,6 +2,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AllocationService } from '../services/allocation.service';
+import { Router } from '@angular/router';
 
 export class Allocation {
   constructor(
@@ -29,7 +30,7 @@ export class AllocationComponent implements OnInit {
   public obj: any = {};
   title: string = "All Allocations";
 
-  constructor(private allocationService: AllocationService, private fb: FormBuilder, private modalService: NgbModal) { }
+  constructor(private allocationService: AllocationService, private fb: FormBuilder, private router: Router) { }
 
   ngOnInit(): void {
     this.allocationService.getAllocationData().subscribe(data => {
@@ -50,53 +51,8 @@ export class AllocationComponent implements OnInit {
     });
   }
 
-  onSubmit() {
-    this.obj = { ...this.allocationForm.value, ...this.obj };
-    this.allocationForm.value;
-    console.log(
-      "LOG: AllocationComponent -> onSubmit -> this.allocationForm.value",
-      this.allocationForm.value
-    );
-
-    if (this.allocationForm.valid) {
-      this.allocationsdata.emit(
-        new Allocation(
-          this.allocationForm.value.allocated_to,
-          this.allocationForm.value.item,
-          this.allocationForm.value.item_description,
-          this.allocationForm.value.project,
-          this.allocationForm.value.allocation_date,
-          this.allocationForm.value.po_no,
-          this.allocationForm.value.po_amount,
-          this.allocationForm.value.start_date,
-          this.allocationForm.value.end_date
-        )
-      );
-    }
-  }
-
-  openAllocation(content) {
-    this.modalService.open(content, { size: 'lg' });
-  }
-
-  addAllocation(){
-    console.log("addItem")
-    if (this.allocationForm.valid) {
-      let item = {
-        "allocation_id": parseInt(this.allocationData[this.allocationData.length - 1].allocation_id) + 1,
-        "allocated_to": this.allocationForm.value.allocated_to,
-        "item": this.allocationForm.value.item,
-        "item_description": this.allocationForm.value.item_description,
-        "project": this.allocationForm.value.project,
-        "allocation_date": this.allocationForm.value.allocation_date,
-        "po_no": this.allocationForm.value.po_no,
-        "po_amount": this.allocationForm.value.po_amount,
-        "start_date": this.allocationForm.value.start_date,
-        "end_date": this.allocationForm.value.end_date
-      }
-      this.allocationData = [...this.allocationData, item];
-      console.log(this.allocationData);
-    }
+  openAllocation() {
+    this.router.navigate(['/add-allocation']);
   }
 
   export() {

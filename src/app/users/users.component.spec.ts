@@ -1,26 +1,26 @@
 import { ComponentFixture, inject, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { UserService } from '../services/user.service';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { AllocationService } from '../services/allocation.service';
-import { AllocationComponent } from './allocation.component';
 import { By } from '@angular/platform-browser';
+import { UsersComponent } from './users.component';
 
-describe('AllocationComponent', () => {
-  let component: AllocationComponent;
-  let fixture: ComponentFixture<AllocationComponent>;
+describe('UsersComponent', () => {
+  let component: UsersComponent;
+  let fixture: ComponentFixture<UsersComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AllocationComponent ],
+      declarations: [ UsersComponent ],
       imports: [ReactiveFormsModule, RouterTestingModule, FormsModule, HttpClientTestingModule],
-      providers:[AllocationService]
+      providers:[UserService]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AllocationComponent);
+    fixture = TestBed.createComponent(UsersComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
     component.ngOnInit();
@@ -32,15 +32,15 @@ describe('AllocationComponent', () => {
 
   describe('boundary', () => {
     it('should have a title', () => {
-      expect(component.title).toBe('All Allocations');
+      expect(component.title).toBe('Manage Employee');
       // we are accessing "h1"
       const title = fixture.debugElement.query(By.css('h1')).nativeElement;
-      expect(title.innerHTML).toBe('All Allocations');
+      expect(title.innerHTML).toBe('Manage Employee');
     });
 
-    it('should have New Allocation Button', () => {
-      const btn = fixture.debugElement.nativeElement.querySelector('#new_allocation');
-      expect(btn.innerHTML).toBe('New Allocation');
+    it('should have New user Button', () => {
+      const btn = fixture.debugElement.nativeElement.querySelector('#new_user');
+      expect(btn.innerHTML).toBe('New user');
     });
 
     it('should have Export Button', () => {
@@ -48,53 +48,53 @@ describe('AllocationComponent', () => {
       expect(btn.innerHTML).toBe('Export');
     });
 
-    it("should show project header length", async() => {
+    it("should show user header length", async() => {
       var rowHeaderLength = fixture.debugElement.nativeElement.querySelectorAll("th").length;
       expect(rowHeaderLength).toBe(8);
     });
 
-    it("should have table header Allocation ID", () => {
+    it("should have table header Employee ID", () => {
       var headers = fixture.debugElement.nativeElement.querySelectorAll("th")
-      expect(headers[0].textContent).toEqual("Allocation ID");
+      expect(headers[0].textContent).toEqual("Employee ID");
     });
 
-    it("should have table header Allocated To", () => {
+    it("should have table header Employee Name", () => {
       var headers = fixture.debugElement.nativeElement.querySelectorAll("th")
-      expect(headers[1].textContent).toEqual("Allocated To");
+      expect(headers[1].textContent).toEqual("Employee Name");
     });
 
-    it("should have table header Item", () => {
+    it("should have table header Email", () => {
       var headers = fixture.debugElement.nativeElement.querySelectorAll("th")
-      expect(headers[2].textContent).toEqual("Item");
+      expect(headers[2].textContent).toEqual("Email");
+    });
+
+    it("should have table header Mobile", () => {
+      var headers = fixture.debugElement.nativeElement.querySelectorAll("th")
+      expect(headers[3].textContent).toEqual("Mobile");
     });
 
     it("should have table header Project", () => {
       var headers = fixture.debugElement.nativeElement.querySelectorAll("th")
-      expect(headers[3].textContent).toEqual("Project");
+      expect(headers[4].textContent).toEqual("Project");
     });
 
-    it("should have table header Allocation Date", () => {
+    it("should have table header Birth Date", () => {
       var headers = fixture.debugElement.nativeElement.querySelectorAll("th")
-      expect(headers[4].textContent).toEqual("Allocation Date");
+      expect(headers[5].textContent).toEqual("Birth Date");
     });
 
-    it("should have table header PO No", () => {
+    it("should have table header Assigned Date", () => {
       var headers = fixture.debugElement.nativeElement.querySelectorAll("th")
-      expect(headers[5].textContent).toEqual("PO No");
+      expect(headers[6].textContent).toEqual("Assigned Date");
     });
 
-    it("should have table header PO Amt", () => {
+    it("should have table header Remove", () => {
       var headers = fixture.debugElement.nativeElement.querySelectorAll("th")
-      expect(headers[6].textContent).toEqual("PO Amt");
-    });
-
-    it("should have table header Life Time", () => {
-      var headers = fixture.debugElement.nativeElement.querySelectorAll("th")
-      expect(headers[7].textContent).toEqual("Life Time");
+      expect(headers[7].textContent).toEqual("Remove");
     });
 
     it("should render table", () => {
-      const result = fixture.debugElement.queryAll(By.css(".allocation-table"));
+      const result = fixture.debugElement.queryAll(By.css(".user-table"));
       const markup = result[0].nativeNode.outerHTML;
 
       //const tableEl = fixture.debugElement.query(By.css('div'));
@@ -104,9 +104,9 @@ describe('AllocationComponent', () => {
   });
 
   describe("exception", () => {
-    it("should be check allocation api", inject([HttpTestingController, AllocationService], (httpMock: HttpTestingController, dataService: AllocationService) => {
+    it("should be check users api", inject([HttpTestingController, UserService], (httpMock: HttpTestingController, userService: UserService) => {
       component.ngOnInit();
-      dataService.getAllocationData().subscribe(data => {
+      userService.getUsersData().subscribe(data => {
         expect(data).toEqual(data);
         expect(data).toBe(data);
         expect(data).not.toBe(null);
